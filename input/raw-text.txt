@@ -1,0 +1,151 @@
+===== INTERNAL COMMUNICATIONS DUMP — ALU SYSTEM EXPORT =====
+Generated: 2024-11-14T08:33:01Z  |  Source: CRM + Ticket + Email Archive
+NOTE: This file contains raw, unprocessed data. Handle with care.
+
+----- TICKET #10482 -----
+From: admissions@alueducation.com
+To: incoming-2024@alueducation.com, grace.nkosi@alumni.alueducation.com
+CC: scholarships@si.alueducation.com
+Subject: Scholarship Portal - Final Reminders
+
+Hi team,
+
+Please ensure all students complete their enrollment before 11:59 PM on Friday.
+Payment portal: https://portal.alueducation.com/enrollment?ref=2024&cohort=RW
+Backup mirror: http://backup.alu-internal.net/enroll
+Scholarship form: https://forms.alueducation.com/scholarship/apply
+
+Contact the finance team at finance@alueducation.com or call:
+  Kigali Office: +250 788 123 456
+  Lagos Liaison: +234 801 234 5678
+  US Admissions: +1 (415) 202-3344
+  UK Partner:    +44 20 7946 0321
+
+The deadline is at 3:30 PM (EAT) which is 12:30 PM UTC.
+
+--
+Kwame Asante
+Head of Admissions
+kwame.asante@alueducation.com
+
+----- TICKET #10483 -----
+Reported by: david.osei@si.alueducation.com
+Assigned to: techsupport@alueducation.com
+
+System flagged an unusual form submission. Raw payload below (DO NOT PROCESS):
+
+  email=admin@alueducation.com&password=hunter2&action=DELETE&table=users
+  <script>document.cookie='session=HIJACKED'</script>
+  '; DROP TABLE students; --
+  ../../../etc/passwd
+  ${7*7}{{config}}
+  user: <img src=x onerror=alert('XSS')>
+  "email": "fake@@domain..com"
+  not-an-email
+  user@
+  @nodomain.com
+
+These strings were submitted via the public scholarship form and must be flagged.
+Card used for test transaction: 4111 1111 1111 1111 (Visa test card — expired)
+Another test: 5500 0000 0000 0004 (Mastercard)
+Malformed attempt: 1234-5678-9012-XXXX
+Partial: 4111-1111
+Too short CC: 4111111111111
+
+----- STUDENT PROFILE RECORDS -----
+ID: STU-2024-0091
+Name: Amara Diallo
+Email: amara.diallo@alueducation.com
+Alumni Email: amara.diallo@alumni.alueducation.com
+Phone: +250 789 000 111
+Registered: 09:15 AM
+Last Login: 22:47
+
+ID: STU-2024-0092
+Name: Fatima Al-Rashid
+Email: fatima.alrashid@alueducation.com
+Secondary: f.alrashid.2022@alumni.alueducation.com
+Phone: +1-800-555-0199
+Alt Phone: (212) 867-5309
+Registered: 10:00 AM
+Last Active: 14:30
+
+ID: STU-2024-0093
+Name: Emeka Eze
+Email: e.eze@si.alueducation.com (SI track)
+Personal: emeka.eze.personal@gmail.com
+Payment Card: 3714 496353 98431  (Amex)
+Phone: +234 703 456 7890
+Registered: 08:45 AM
+
+----- EVENT LOG: PAYMENT GATEWAY -----
+[09:02:11] SUCCESS   | card=4916338506082832 | amt=$1,250.00 | user=amara.diallo@alueducation.com
+[09:14:55] FAILED    | card=5425233430109903 | amt=$850.50  | user=fatima.alrashid@alueducation.com | reason=CVV_MISMATCH
+[09:31:00] FLAGGED   | card=4111111111111111 | amt=$0.01    | note=Test card detected
+[09:45:17] SUCCESS   | card=4916338506082832 | amt=€340.00  | user=amara.diallo@alueducation.com
+[10:00:00] ATTEMPTED | card=0000000000000000 | amt=£500     | BLOCKED: pattern matched fraud list
+
+----- SOCIAL MEDIA MONITOR — Twitter/X Scrape -----
+Post by @ALU_Rwanda:
+  "Big news for our community! 🎉 Applications open NOW for the class of 2026.
+   Apply here → https://apply.alueducation.com/2026
+   #ALU #AfricanLeadership #EdTech #Rwanda2024 #Scholarship
+   RT to spread the word!"
+
+Post by @student_dev_ke:
+  "Just deployed my first REST API at 11:55 PM after 3 days straight. 😅
+   #100DaysOfCode #ALULife #BuildInPublic
+   Check it: https://github.com/student-dev/first-api"
+
+Post by @fake_alu_account:
+  "FREE SCHOLARSHIPS! DM us now. Send card details to fund@alu-scam.co
+   #ALU #Scholarship #Free"
+   — Note: flagged as impersonator
+
+----- COURSE CATALOG EXCERPT -----
+Course: Software Engineering Foundations
+Instructor: prof.nzinga@alueducation.com
+Schedule: Mon/Wed 08:00 AM – 10:00 AM | Lab: Fri 2:00 PM – 5:30 PM
+Cost: $3,500.00 per term | Financial Aid: up to $2,000.00
+Info: https://courses.alueducation.com/sef/2024?lang=en&region=africa
+
+Course: Data Science & Analytics
+Instructor: dr.okonkwo@alueducation.com
+Schedule: Tue/Thu 09:30 AM – 11:30 AM
+Cost: ₦450,000.00 | USD equivalent: ~$300.00
+Info: https://courses.alueducation.com/dsa?v=2
+
+----- RAW HTML SNIPPETS (from web scraper) -----
+<div class="student-card" id="card-0091">
+  <h2>Amara Diallo</h2>
+  <p class="email">amara.diallo@alueducation.com</p>
+  <span class="badge alumni">Alumni Network</span>
+  <a href="https://portal.alueducation.com/profile/0091">View Profile</a>
+</div>
+
+<form action="/submit" method="POST">
+  <input type="text" name="username" placeholder="Enter username">
+  <input type="email" name="email" placeholder="Enter email">
+  <button type="submit">Register</button>
+</form>
+
+<!-- Legacy comment: old DB pass was root:password123 — REMOVE BEFORE DEPLOY -->
+<script src="https://cdn.alueducation.com/js/app.bundle.js"></script>
+<img src="/assets/logo.png" alt="ALU Logo" class="logo">
+<br/>
+
+----- CURRENCY & FINANCIAL SUMMARY -----
+Q3 Revenue:       $1,284,500.00
+Scholarships Out: $342,000.00
+Refunds Pending:  €12,450.75
+Lagos Collections: ₦89,250,000
+Kigali Fees:      Rwf 4,500,000
+Misc USD:         $75.00, $1,000, $22,999.99
+
+----- INVALID / EDGE CASE DATA -----
+Bad emails: not-an-email, user@, @nodomain, user@@double.com, plaintext, 123
+Bad URLs: htp://broken.com, ftp://old-protocol.net, javascript:alert(1), //no-scheme
+Bad cards: 1234, 0000-0000-0000-0000, 9999999999999999
+Bad times: 25:00, 13:75 AM, 99:99 PM, 24:01
+Bad phones: 123, +0 000, 99999
+

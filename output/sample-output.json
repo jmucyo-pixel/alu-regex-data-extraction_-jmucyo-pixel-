@@ -1,0 +1,93 @@
+{
+    "summary": {
+        "total_emails_found": 18,
+        "alu_official_emails": 10,
+        "alu_alumni_emails": 3,
+        "alu_si_emails": 3,
+        "external_emails": 2,
+        "rejected_emails": 0,
+        "urls_found": 8,
+        "phone_numbers_found": 2,
+        "valid_credit_cards": 5,
+        "hostile_lines_blocked": 7
+    },
+    "extracted": {
+        "emails": {
+            "alu_official": [
+                "admissions@alueducation.com",
+                "incoming-2024@alueducation.com",
+                "finance@alueducation.com",
+                "kwame.asante@alueducation.com",
+                "techsupport@alueducation.com",
+                "admin@alueducation.com",
+                "amara.diallo@alueducation.com",
+                "fatima.alrashid@alueducation.com",
+                "prof.nzinga@alueducation.com",
+                "dr.okonkwo@alueducation.com"
+            ],
+            "alu_alumni": [
+                "grace.nkosi@alumni.alueducation.com",
+                "amara.diallo@alumni.alueducation.com",
+                "f.alrashid.2022@alumni.alueducation.com"
+            ],
+            "alu_si": [
+                "scholarships@si.alueducation.com",
+                "david.osei@si.alueducation.com",
+                "e.eze@si.alueducation.com"
+            ],
+            "external": [
+                "emeka.eze.personal@gmail.com",
+                "fund@alu-scam.co"
+            ],
+            "rejected": []
+        },
+        "urls": [
+            "https://portal.alueducation.com/enrollment?ref=2024&cohort=RW",
+            "http://backup.alu-internal.net/enroll",
+            "https://forms.alueducation.com/scholarship/apply",
+            "https://apply.alueducation.com/2026",
+            "https://github.com/student-dev/first-api",
+            "https://courses.alueducation.com/sef/2024?lang=en&region=africa",
+            "https://courses.alueducation.com/dsa?v=2",
+            "https://portal.alueducation.com/profile/0091"
+        ],
+        "phone_numbers": [
+            "+250 788 123 456",
+            "+250 789 000 111"
+        ],
+        "credit_cards": [
+            {
+                "masked": "****-****-****-1111",
+                "type": "Visa"
+            },
+            {
+                "masked": "****-****-****-0004",
+                "type": "Mastercard"
+            },
+            {
+                "masked": "****-****-****-2832",
+                "type": "Visa"
+            },
+            {
+                "masked": "****-****-****-9903",
+                "type": "Mastercard"
+            },
+            {
+                "masked": "****-****-****-0000",
+                "type": "Unknown"
+            }
+        ],
+        "security": {
+            "hostile_lines_flagged": 7,
+            "hostile_snippets": [
+                "<script>document.cookie='session=HIJACKED'</script>",
+                "'; DROP TABLE students; --",
+                "../../../etc/passwd",
+                "${7*7}{{config}}",
+                "user: <img src=x onerror=alert('XSS')>",
+                "<script src=\"https://cdn.alueducation.com/js/app.bundle.js\"></script>",
+                "Bad URLs: htp://broken.com, ftp://old-protocol.net, javascript:alert(1), //no-sc..."
+            ]
+        }
+    }
+}
